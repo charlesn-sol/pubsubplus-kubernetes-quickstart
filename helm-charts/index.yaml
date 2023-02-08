@@ -33,7 +33,7 @@ entries:
     sources:
     - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
     urls:
-    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/helm-charts/pubsubplus-3.2.0.tgz
+    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/pubsubplus-3.2.0.tgz
     version: 3.2.0
   pubsubplus-ha:
   - annotations:
@@ -68,6 +68,6 @@ entries:
     sources:
     - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
     urls:
-    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/helm-charts/pubsubplus-ha-3.2.0.tgz
+    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/pubsubplus-ha-3.2.0.tgz
     version: 3.2.0
 generated: "2023-02-08T10:40:49.470149-05:00"
