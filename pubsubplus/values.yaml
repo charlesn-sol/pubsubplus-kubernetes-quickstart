@@ -112,7 +112,7 @@ tls:
 
 service:
   # service.type specifies how to expose the service: options include ClusterIP, NodePort, LoadBalancer (default if not specified)
-  type: LoadBalancer
+  type: NodePort
 
   # service.annotations allows to add provider-specific service annotations, see example below
   #annotations:
