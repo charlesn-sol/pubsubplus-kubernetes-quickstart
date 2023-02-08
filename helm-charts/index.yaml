@@ -4,7 +4,7 @@ entries:
   - annotations:
       charts.openshift.io/name: PubSub+ Event Broker
     apiVersion: v2
-    created: "2023-02-08T09:56:00.098917-05:00"
+    created: "2023-02-08T10:40:49.471482-05:00"
     description: Deploy Solace PubSub+ Event Broker Singleton or HA redundancy group
       onto a Kubernetes Cluster
     digest: 3c7004d84b3c78bb7689731c03115c91fafc4be04d39e99b9d624ade3234db91
@@ -33,6 +33,41 @@ entries:
     sources:
     - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
     urls:
-    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/pubsubplus-3.2.0.tgz
+    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/helm-charts/pubsubplus-3.2.0.tgz
     version: 3.2.0
-generated: "2023-02-08T09:56:00.096721-05:00"
+  pubsubplus-ha:
+  - annotations:
+      charts.openshift.io/name: PubSub+ Event Broker, HA
+    apiVersion: v2
+    created: "2023-02-08T10:40:49.472275-05:00"
+    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
+      onto a Kubernetes Cluster
+    digest: f3e9e66117103834e3534c75c41ca4f07b9924161c3da40f56d620b686256e2c
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-ha
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
+    urls:
+    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/helm-charts/pubsubplus-ha-3.2.0.tgz
+    version: 3.2.0
+generated: "2023-02-08T10:40:49.470149-05:00"
