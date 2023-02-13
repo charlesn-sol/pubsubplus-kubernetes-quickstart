@@ -122,10 +122,11 @@ service:
   #    "containerPorts" (from the PubSub+ container) will be exposed as external "servicePorts",
   # Refer to the Solace documentation of Default Port Numbers for the containerPorts.
   ports:
-      - port: 80
-        targetPort: 80
-        nodePort: 30036
-        protocol: TCP
+      # - port: 80
+      #   targetPort: 80
+      #   nodePort: 30036
+      #   protocol: TCP
+      #   name: ''
       - servicePort: 2222
         containerPort: 2222
         protocol: TCP
