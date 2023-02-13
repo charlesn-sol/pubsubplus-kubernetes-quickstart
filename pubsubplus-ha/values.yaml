@@ -124,7 +124,6 @@ service:
   ports:
       - servicePort: 2222
         containerPort: 2222
-        targetPort: 30036
         nodePort: 30036
         protocol: TCP
         name: tcp-ssh
