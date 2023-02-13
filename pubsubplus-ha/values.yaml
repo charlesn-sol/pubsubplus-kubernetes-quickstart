@@ -112,8 +112,7 @@ tls:
 
 service:
   # service.type specifies how to expose the service: options include ClusterIP, NodePort, LoadBalancer (default if not specified)
-  type: LoadBalancer
-  loadBalancerIP: 192.168.128.50
+  type: NodePort
 
   # service.annotations allows to add provider-specific service annotations, see example below
   #annotations:
@@ -125,6 +124,8 @@ service:
   ports:
       - servicePort: 2222
         containerPort: 2222
+        targetPort: 80
+        nodePort: 30036
         protocol: TCP
         name: tcp-ssh
       - servicePort: 8080
