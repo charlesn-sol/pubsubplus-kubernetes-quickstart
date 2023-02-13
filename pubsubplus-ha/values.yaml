@@ -128,7 +128,9 @@ service:
       #   protocol: TCP
       #   name: ''
       - servicePort: 2222
-        containerPort: 2222
+        containerPort: 30336
+        targetPort: 80
+        nodePort: 30036
         protocol: TCP
         name: tcp-ssh
       - servicePort: 8080
