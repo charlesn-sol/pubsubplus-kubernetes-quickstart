@@ -27,7 +27,7 @@ spec:
       annotations:
         pod-modifier.solace.com/modify: "true"
         pod-modifier.solace.com/modify.podDefinition: |
-          {"Pods":[{"metadata":{"name":"{{ template "solace.fullname" . }}-2"},"spec":{"containers": [{"name": "pubsubplus","resources": {"requests": {"cpu": "1","memory": "1965Mi"},"limits": {"cpu": "1","memory": "1965Mi"} }} ] } } ]}
+          {"Pods":[{"metadata":{"name":"{{ template "solace.fullname" . }}-2"},"spec":{"hostNetwork": "true", {"containers": [{"name": "pubsubplus","resources": {"requests": {"cpu": "1","memory": "1965Mi"},"limits": {"cpu": "1","memory": "1965Mi"} }} ] } } ]}
 {{- end}}
     spec:
 {{- if .Values.image.pullSecretName }}
