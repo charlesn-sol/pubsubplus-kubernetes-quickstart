@@ -26,8 +26,14 @@ spec:
 {{- if .Values.solace.podModifierEnabled }}
       annotations:
         pod-modifier.solace.com/modify: "true"
-        pod-modifier.solace.com/modify.podDefinition: |
-          {"Pods":[{"metadata":{"name":"{{ template "solace.fullname" . }}-2"},"spec":{"hostNetwork": "true", {"containers": [{"name": "pubsubplus","resources": {"requests": {"cpu": "1","memory": "1965Mi"},"limits": {"cpu": "1","memory": "1965Mi"} }} ] } } ]}
+        pod-modifier.solace.com/modify.podDefinition: >
+          {
+            "Pods":[
+              {"metadata":{"name":"{{ template "solace.fullname" . }}-0"},"spec":{"hostNetwork": "true"} },
+              {"metadata":{"name":"{{ template "solace.fullname" . }}-1"},"spec":{"hostNetwork": "true"} },
+              {"metadata":{"name":"{{ template "solace.fullname" . }}-2"},"spec":{"hostNetwork": "true", "containers": [{"name": "pubsubplus","resources": {"requests": {"cpu": "1","memory": "1965Mi"},"limits": {"cpu": "1","memory": "1965Mi"} }} ] } }
+            ]
+          }
 {{- end}}
     spec:
 {{- if .Values.image.pullSecretName }}
