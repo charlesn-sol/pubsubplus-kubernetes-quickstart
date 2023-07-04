@@ -167,6 +167,32 @@
                     "type": "string"
                 }
             }
+        },
+        "nodeTaint": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "effect": {
+                    "type": "string"
+                },
+                "monitorKey": {
+                    "type": "string"
+                },
+                "monitorValue": {
+                    "type": "string"
+                },
+                "monitorEffect": {
+                    "type": "string"
+                }
+            }
         }
     }
 }
