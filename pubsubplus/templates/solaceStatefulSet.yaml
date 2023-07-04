@@ -14,7 +14,7 @@ spec:
       app.kubernetes.io/name: {{ template "solace.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   serviceName: {{ template "solace.fullname" . }}-discovery
-  replicas: {{- if .Values.solace.redundancy }} 2 {{- else }} 1 {{- end }}
+  replicas: {{- if .Values.solace.redundancy }} 3 {{- else }} 1 {{- end }}
   podManagementPolicy: Parallel
   updateStrategy: 
     type: RollingUpdate
@@ -30,15 +30,6 @@ spec:
           {"Pods":[{"metadata":{"name":"{{ template "solace.fullname" . }}-2"},"spec":{"containers": [{"name": "pubsubplus","resources": {"requests": {"cpu": "1","memory": "1965Mi"},"limits": {"cpu": "1","memory": "1965Mi"} }} ] } } ]}
 {{- end}}
     spec:
-      nodeSelector:
-        solace/node-type: message-routing-node
-{{- if .Values.nodeTaint.enabled }}
-      tolerations:
-      - key: {{ required "A valid node taint key is required!" .Values.nodeTaint.key }}
-        operator: Equal
-        value: {{ required "A valid node taint value is required!" .Values.nodeTaint.value }}
-        effect: {{ .Values.nodeTaint.effect }}
-{{- end}}
 {{- if .Values.image.pullSecretName }}
       imagePullSecrets:
       - name: {{ .Values.image.pullSecretName}}
