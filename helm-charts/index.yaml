@@ -33,7 +33,7 @@ entries:
     sources:
     - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
     urls:
-    - https://vault.soltest.net/public/pubsubplus-kubernetes-helm-quickstart/src/branch/main-custom/helm-charts/pubsubplus-3.3.1.tgz
+    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/pubsubplus-3.3.1.tgz
     version: 3.3.1
   - annotations:
       charts.openshift.io/name: PubSub+ Event Broker
@@ -102,7 +102,7 @@ entries:
     sources:
     - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
     urls:
-    - https://vault.soltest.net/public/pubsubplus-kubernetes-helm-quickstart/src/branch/main-custom/helm-charts/pubsubplus-ha-3.3.1.tgz
+    - https://charlesn-sol.github.io/pubsubplus-kubernetes-quickstart/helm-charts/pubsubplus-ha-3.3.1.tgz
     version: 3.3.1
   - annotations:
       charts.openshift.io/name: PubSub+ Event Broker, HA
